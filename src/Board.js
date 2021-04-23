@@ -116,117 +116,133 @@ class Board extends Component {
 
   render() {
     return (
-      <div style={{ width: "60%", marginLeft: "auto", marginRight: "auto" }}>
-        {/* {myAlert} */}
-        <Button
-          clicked={this.state.btn1Clicked}
-          buttonText={this.state.btn1}
-          handleClick={() => {
-            this.setState({
-              btn1Clicked: true,
-              btn1: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn2Clicked}
-          buttonText={this.state.btn2}
-          handleClick={() => {
-            this.setState({
-              btn2Clicked: true,
-              btn2: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn3Clicked}
-          buttonText={this.state.btn3}
-          handleClick={() => {
-            this.setState({
-              btn3Clicked: true,
-              btn3: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn4Clicked}
-          buttonText={this.state.btn4}
-          handleClick={() => {
-            this.setState({
-              btn4Clicked: true,
-              btn4: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn5Clicked}
-          buttonText={this.state.btn5}
-          handleClick={() => {
-            this.setState({
-              btn5Clicked: true,
-              btn5: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn6Clicked}
-          buttonText={this.state.btn6}
-          handleClick={() => {
-            this.setState({
-              btn6Clicked: true,
-              btn6: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn7Clicked}
-          buttonText={this.state.btn7}
-          handleClick={() => {
-            this.setState({
-              btn7Clicked: true,
-              btn7: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn8Clicked}
-          buttonText={this.state.btn8}
-          handleClick={() => {
-            this.setState({
-              btn8Clicked: true,
-              btn8: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-        <Button
-          clicked={this.state.btn9Clicked}
-          buttonText={this.state.btn9}
-          handleClick={() => {
-            this.setState({
-              btn9Clicked: true,
-              btn9: this.state.player === "X" ? "X" : "O",
-              player: this.state.player === "X" ? "Y" : "X",
-              moves: this.state.moves + 1,
-            });
-          }}
-        />
-      </div>
+      <>
+        <div style={{ textAlign: "center" }}>
+          <h1>Tic Tac Toe Game</h1>
+          <br />
+          <button
+            onClick={() => {
+              this.resetState();
+            }}
+            className="col-md-4 offset-md-4"
+          >
+            Reset Game
+          </button>
+        </div>
+        <br />
+
+        <div style={{ width: "60%", marginLeft: "auto", marginRight: "auto" }}>
+          {/* {myAlert} */}
+          <Button
+            clicked={this.state.btn1Clicked}
+            buttonText={this.state.btn1}
+            handleClick={() => {
+              this.setState({
+                btn1Clicked: true,
+                btn1: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn2Clicked}
+            buttonText={this.state.btn2}
+            handleClick={() => {
+              this.setState({
+                btn2Clicked: true,
+                btn2: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn3Clicked}
+            buttonText={this.state.btn3}
+            handleClick={() => {
+              this.setState({
+                btn3Clicked: true,
+                btn3: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn4Clicked}
+            buttonText={this.state.btn4}
+            handleClick={() => {
+              this.setState({
+                btn4Clicked: true,
+                btn4: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn5Clicked}
+            buttonText={this.state.btn5}
+            handleClick={() => {
+              this.setState({
+                btn5Clicked: true,
+                btn5: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn6Clicked}
+            buttonText={this.state.btn6}
+            handleClick={() => {
+              this.setState({
+                btn6Clicked: true,
+                btn6: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn7Clicked}
+            buttonText={this.state.btn7}
+            handleClick={() => {
+              this.setState({
+                btn7Clicked: true,
+                btn7: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn8Clicked}
+            buttonText={this.state.btn8}
+            handleClick={() => {
+              this.setState({
+                btn8Clicked: true,
+                btn8: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+          <Button
+            clicked={this.state.btn9Clicked}
+            buttonText={this.state.btn9}
+            handleClick={() => {
+              this.setState({
+                btn9Clicked: true,
+                btn9: this.state.player === "X" ? "X" : "O",
+                player: this.state.player === "X" ? "Y" : "X",
+                moves: this.state.moves + 1,
+              });
+            }}
+          />
+        </div>
+      </>
     );
   }
 }
